@@ -1,0 +1,28 @@
+.DS_Store
+
+terraform.tfplan
+terraform.tfstate
+terraform.tfstate.*
+
+*.tfvars
+
+*.backup
+
+./*.tfstate
+.terraform/
+
+*.log
+*.bak
+*~
+.*.swp
+.idea/
+.vscode/
+
+# kubernetes keys
+*.b64
+
+.temp_credentials
+
+# Working dirs
+/environments/dev-vpc/temp
+/environments/dev-vpc/assets

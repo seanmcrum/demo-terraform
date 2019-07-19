@@ -12,6 +12,7 @@ A simple example showing the features that Terraform provides
 ### Setup
 
 1. Install Terraform
+
     ```bash
     brew install terraform
     ```
@@ -41,21 +42,25 @@ Every directory with `*.tf` files is referred to as a _Module_. Modules can be i
 _Example_1 creates a single AWS EC2 node in an AWS account._
 
 To perform a dry run and view what assets Terraform wants to create:
+
     ```bash
     terraform plan -var-file="example.tfvars"
     ```
 
 ### Create EC2 node
+
     ```bash
     terraform apply -var-file="example.tfvars"
     ```
 
 ### Destroy the EC2 node
+
     ```bash
     terraform destroy -var-file="example.tfvars"
     ```
 
 ### View information about resources Terraform created
+
     ```bash
     terraform state list
     terraform state show <resource>

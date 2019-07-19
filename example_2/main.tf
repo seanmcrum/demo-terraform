@@ -1,7 +1,7 @@
 provider "aws" {
   region     = "${var.region}"
-  access_key = "${var.dev_aws_access_key_id}"
-  secret_key = "${var.dev_aws_secret_access_key}"
+  access_key = "${var.example_aws_access_key_id}"
+  secret_key = "${var.example_aws_secret_access_key}"
 }
 
 resource "aws_instance" "demo_terraform_node_2" {
@@ -15,9 +15,6 @@ resource "aws_instance" "demo_terraform_node_2" {
 
 module "demo_terraform_module" {
   source           = "./module_ec2"
-
-  # Passing variables defined in current repo
-  ami              = "${var.ami}"
   
   # Passing variables based on other resources
   instance_type    = "${aws_instance.demo_terraform_node_2.instance_type}"

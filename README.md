@@ -55,10 +55,8 @@ To perform a dry run and view what assets Terraform wants to create:
 
 ### View information about resources Terraform created
 
-    ```bash
     terraform state list
     terraform state show <resource>
-    ```
 
 ## Example_2
 
